@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="button" value="confirm" onclick="func_confirm()" />
+    <script>
+        function func_confirm(){
+            if(confirm('ok?')){
+                alert('ok');
+            } else {
+                alert('cancel');
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- comfirm을 실행하면 경고창에서 확인 하나만 뜨는것이 아닌
+확인과 취소 를 택하게되고 선택한 결과에따라서 출력메시지가
+각각 다르게 나오도록 설정할 수 있다. -->
