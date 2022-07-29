@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a id="anchor" href="http://opentutorials.org">opentutorials</a>
+<ul>
+    <li>HTML</li>
+    <li>css</li>
+    <li id="list">JavaScript</li>
+</ul>
+<input type="button" id="button" value="button" />
+<script>
+    var target = document.getElementById('list');
+    console.log(target.constructor.name); // HTMLLIElement
+
+    var target = document.getElementById('anchor');
+    console.log(target.constructor.name); // HTMLAnchorElement
+
+    var target = document.getElementById('button');
+    console.log(target.constructor.name); // HTMLInputElement
+</script>
+</body>
+</html>
+<!-- 
+> var target = document.getElementById('anchor'); 
+undefined
+> target
+<a id=​"anchor" href=​"http:​/​/​opentutorials.org">​opentutorials​</a>​
+> target.href
+'http://opentutorials.org/'
+> target.href = 'http://google.com';
+'http://google.com' 
+
+-->
