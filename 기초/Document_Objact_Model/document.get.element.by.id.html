@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li id="active">CSS</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    var li = document.getElementById('active');
+    li.style.color='red';
+</script>
+</body>
+</html>
+<!-- id 값을 기준으로 객체를 조회한다. 성능면에서 가장 우수함. 
+    
+하나의 엘리먼트만을 조회한다 문서에서 id라는 것은 어떤 특정한 
+엘리먼트 하나만을 식별하는 문서에서 유일무일한 식별자이기 때문이다.-->
