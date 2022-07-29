@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+</head>
+<body>
+    <script>
+        if (!Object.keys) {
+            Object.keys = function () {
+                'use strict';
+            var hasOwnProperty = Object.prototype.hasOwnProperty,
+                hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
+                dontEnums = [
+                    'toString',
+                    'toLocaleString',
+                    'valueOf',
+                    'hasOwnpraperty',
+                    'isPrototypeOf',
+                    'propertyIsEnumerable',
+                    'constructor'
+                ],
+                dontEnumsLength = dontEnums.length;
+            }
+        }
+    </script>
+    
+</body>
+</html>

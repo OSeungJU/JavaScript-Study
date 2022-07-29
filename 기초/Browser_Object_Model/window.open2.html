@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <input type="button" value="open" onclick="winopen();">
+    <input type="text" onkeypress="winmessage(this.value)">
+    <input type="button" value="close" onclick="winclose()">
+    <script>
+        function winopen(){
+            win = window.open('demo2.thml', 'ot', 'width=300xp, height=500');
+        }
+        function winmessage(msg){
+            win.document.getElementById('message').innerText=msg;
+        }
+        function winclose(){
+            win.close();
+        }
+    </script>
+</body>
+</html>
+<!-- 서버를 구동해야 열림 참고  -->
