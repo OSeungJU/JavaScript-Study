@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active">Javascript
+        <ul>
+            <li>Javascript</li>
+            <li class="marked">DOM</li>
+            <li class="marked">BOM</li>
+        </ul>
+    </li>
+</ul>
+<script src="/기초/lib/jquery/jquery-3.6.0.min.js"></script>
+<script>
+    //$('#active').find('.marked').css( "background-color", "red");
+    $('#active').css('color', 'blue').find('.marked').css('background-color', 'red');
+</script>
+</body>
+</html>

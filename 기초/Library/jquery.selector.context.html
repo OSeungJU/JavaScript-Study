@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active">Javascript
+        <ul>
+            <li>Javascript</li>
+            <li class="marked">DOM</li>
+            <li class="marked">BOM</li>
+        </ul>
+    </li>
+</ul>
+<script src="/기초/lib/jquery/jquery-3.6.0.min.js"></script>
+<script>
+    //$( ".marked", "#active" ).css( "vackground-color", "red" );
+    $("#active .marked"). css( "backgroind-color", "red" );  // 같음.
+</script>
+</body>
+</html>
