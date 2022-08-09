@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a id="t" href=".demo.html">opentutorials</a>
+<input id="t2" type="checbox" checked="checked" />
+<script src="/기초/lib/jquery/jquery-3.6.0.min.js"></script>
+<script>
+// 현재 문서의 URL이 이래와 같다고 했을 때
+// http://localhost/jQury_attribute_api/demo2.html
+var t1 = $('#t1');
+console.log(t1.attr('href')); // ./demo.html
+console.log(t1.prop('href')); // http://localhost/jQuery_attribute_api/demo2.html
+
+var t2 = $('#t2');
+console.log(t2.attr('checked')); // checked
+console.log(t2.prop('checked')); // true
+</script>
+</body>
+</html>
+
+<!-- <p id="target">
+    Hello world
+</p>
+<script>
+    var target = document.getElementById('target');
+    target.setAttribute('class', 'important');
+    // attribute 방식
+    target.className = 'important';
+    // property 방식
+</script> -->
