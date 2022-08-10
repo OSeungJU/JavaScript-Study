@@ -1,0 +1,35 @@
+jQuery 속성 제어 API
+
+1.   - jQuery 객체의 메소드중 setAttribute, getAttribute에 대응되는 메소드는 attr이다.
+       또한 removeAttribute에 대응되는 메소드로는 removeattr이 있다.
+
+
+jQuery 조회 범위 제한
+
+1.  selector context
+     - 간단한 방법은 조회할 때 조회 범위를 제한하는 것이다. 그 제한된 범위를 jQuery에서는 selector context라고한다.
+2.  find()
+     - find는 jQuery 객체 내에서 엘리먼트를 조회하는 기능을 제공한다.
+     - find를 쓰는 이유는 체인을 끊지 않고 작업의 대상을 변경하고 싶을 때 사용한다.
+
+
+jQuery Node 제어 API
+
+1.  추가
+     - 추가와 관련된 주요한 메소드는 4가지이며 각각의 관계를 그림으로 나타내면 아래와 같다.
+       before
+    -------------
+    |  prepend  |
+    || content ||
+    |  append   |
+    -------------
+    after
+
+2.  제거
+     - 제거와 관련된 API는 remove와 empty가 있다. remove는 선택된 엘리먼트를 제거하는 것이고
+       empty는 선택된 엘리먼트의 텍스트 노드를 제거하는 것이다.
+
+3.   바꾸기
+     - replaceAll과 replaceWith는 모드 노드의 내용을 교체하는 API이다.
+       replaceWith가 제어 대상을 먼저 지정하는 것에 반해서
+       replaceAll은 제어 대상을 인자로 전달한다.
