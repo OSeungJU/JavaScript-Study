@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="target" id="target1">
+        target 1
+    </div>
+
+    <div class="target" id="target2">
+        target 2
+    </div>
+
+    <div id="source">source</div>
+    
+    <input type="button" value="replaceAll target1" id="btn1" />
+    <input type="button" value="replaceWith target 2" id="btn2" />
+    <script src="../Jquery_1/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#btn1').click(function(){
+            $('#source').clone().replaceAll('#target1');
+        })
+        $('#btn2').click(function(){
+            $('#target2').replaceWith($('#source').clone());
+        })
+    </script>
+</body>
+</html>
+<!-- JQuery Node 제어 API 
+    복사-->
