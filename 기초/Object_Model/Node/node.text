@@ -1,52 +1,66 @@
 Node 객체는 dom에서 시조와 같은 역할을 한다. 다시 말해서 모든 DOM 객체는 Node 객체를 상속 받는다.
 
 관계
--엘리먼트는 서로 부모, 자식, 혹은 형제자매 관계로 연결되어있다. 각각의 Node가 다른 Node와 연결된 정보를 보여주는 API
- 를 통해서 문서를 프로그래밍적으로 탐색할 수 있다.
-    Node.childNodes
-    Node.firstChild
-    Node.lastChild
-    Node.nextSlibling
-    Node.previousSibling
-    Node.contains()
-    node.hasChildNodes()
+    - 엘리먼트는 서로 부모, 자식, 혹은 형제자매 관계로 연결되어있다. 각각의 Node가 다른 Node와 연결된 정보를 보여주는 API
+      를 통해서 문서를 프로그래밍적으로 탐색할 수 있다.
+        1. Node.childNodes
+        2. Node.firstChild
+        3. Node.lastChild
+        4. Node.nextSlibling
+        5. Node.previousSibling
+        6. Node.contains()
+        7. node.hasChildNodes()
 
 노드의 종류
--Node 객체는 모든 구성요소를 대표하는 객체이기 때문에 각각의 구성요소가 어떤 카테고리에 속하는 것인지를 알려주는 식별자를 제공한다.
-    Node.nodeType
-    Node.nodeName
+    - Node 객체는 모든 구성요소를 대표하는 객체이기 때문에 각각의 구성요소가 어떤 카테고리에 속하는 것인지를 알려주는 식별자를 제공한다.
+        1. Node.nodeType
+        2. Node.nodeName
 
 값
--Node 객체의 값을 제공하는 API
-    Node.nodeValue
-    Node.textContent
+    - Node 객체의 값을 제공하는 API
+        1. Node.nodeValue
+        2. Node.textContent
 
 자식관리
--Node 객체의 자식을 추가하는 방법에 대한 API
-    Node.appendChild()
-    Node.removeChild()
+    - Node 객체의 자식을 추가하는 방법에 대한 API
+        1. Node.appendChild()
+        2. Node.removeChild()
 
 노드 종류 API
--노드 작업을 하게 되면 현재 선택된 노드가 어떤 타입인지를 판단해야 하는 경우가 있다. 이런 경우에 사용할 수 있는 API가
-nodeType, nodeName이다.
-    Nond.nodeType
-    node의 타입을 의미한다.
-    Node.nodeName
-    node의 이름 (태그명을 의미한다.)
+    - 노드 작업을 하게 되면 현재 선택된 노드가 어떤 타입인지를 판단해야 하는 경우가 있다.
+      이런 경우에 사용할 수 있는 API가nodeType, nodeName이다.
+        1. Nond.nodeType
+           node의 타입을 의미한다.
+        2. Node.nodeName
+           node의 이름 (태그명을 의미한다.)
+
 
 재귀함수
--어떠한 함수가 실행될떄 자기 자신을 호출하는 것임
+    - 어떠한 함수가 실행될떄 자기 자신을 호출하는 것임
+
 
 노드추가
--노드의 추가와 관련된 API들은 아래와 같다.
-    appendChild(child)
-    노드의 마지막 자식으로 주어진 엘리먼트 추가
-    inserBefore(newElement, referenceElement)
-    appendChild와 동작 방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가된다.
+    - 노드의 추가와 관련된 API들은 아래와 같다.
+        1. appendChild(child)
+           노드의 마지막 자식으로 주어진 엘리먼트 추가
+        2. inserBefore(newElement, referenceElement)
+           appendChild와 동작 방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가된다.
 
--노드를 추가하기 위해서는 추가할 엘리먼트를 실행해야 하는데 이것은 document 객체의 기능이다.
- 아래 API는 노드를 생성하는 API이다.
-    document.createElement(tagname)
-    엘리먼트 노드를 추가한다.
-    document.createTextNode(data)
-    텍스트 노드를 추가한다.
+    - 노드를 추가하기 위해서는 추가할 엘리먼트를 실행해야 하는데 이것은 document 객체의 기능이다.
+      아래 API는 노드를 생성하는 API이다.
+        1. document.createElement(tagname)
+           엘리먼트 노드를 추가한다.
+        2. document.createTextNode(data)
+           텍스트 노드를 추가한다.
+
+문자열로 노드 제어
+    - innerHTML
+        innerHTML는 문자열로 자식 노드를 만들 수 있는 기능을 제공한다. 또한 자식 노드의 값을 읽어올 수도 있다.
+    
+    - outerHTML
+        outerHTML은 선택한 엘리먼트를 포함해서 처리한다.
+    
+    - innerText, outerText
+        innerHTML, outerHTML과 다르게 이 API들은 값을 읽을 때는 HTML 코드를 제외한 문자열을 리턴하고,
+        값을 변경할 때는 HTML의 코드를 그대로 추가한다.
+        
