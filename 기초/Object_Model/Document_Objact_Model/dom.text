@@ -1,0 +1,14 @@
+Document 객체는 DOM의 스팩이고 이것이 웹브라우저에서는 HTMLDocument 객체로 사용된다.
+HTMLDocument 객체는 문서 전체를 대표하는 객체라고 할 수 있다.
+
+
+노드 생성 API
+    - document 객체의 주요 임무는 새로운 노드를 생성해주는 역할이다.
+        1. createElement()
+        2. createTextNode()
+    
+문서 정보 API
+    1. title
+    2. URL
+    3. referrer
+    4.lastModified    
