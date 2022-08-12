@@ -21,6 +21,7 @@ Node 객체는 dom에서 시조와 같은 역할을 한다. 다시 말해서 모
         1. Node.nodeValue
         2. Node.textContent
 
+        
 자식관리
     - Node 객체의 자식을 추가하는 방법에 대한 API
         1. Node.appendChild()
