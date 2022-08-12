@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <style>
+            body{
+                padding:e;
+                margin:e;
+            }
+            div{
+                border: 50px solid #1065e6;
+                padding: 50px;
+                margin: 50px;
+            }
+            #target{
+                width: 100px;
+                height: 2000px;
+            }
+        </style>
+        <table>
+            <tr><td>
+                <div>
+                    <div id="target">
+                        Coding
+                    </div>
+                </div>
+            </td></tr>
+        </table>
+
+        <script>
+            var t = document.getElementById('target');
+            setInterval(function(){
+                console.log('getBoundingClientRect : ', t.getboundingClientRect().top, 'pageYOset:',
+                    window.pageXOffset);
+            }, 1000)
+        </script>
+    </body>
+</html>
+<!-- 문서의 기하학적 특성
+    뷰포트 -->
