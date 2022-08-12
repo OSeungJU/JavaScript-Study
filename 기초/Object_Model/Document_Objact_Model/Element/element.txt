@@ -5,28 +5,47 @@ DOM은 HTML만을 제어하기 위한 모델이 아니다. HTML이나 XML, SVG, 
 일반적인 규칙에 대한 속성을 정의하고 있고, 각각의 구체적인 언어(HTML, XML, SVG)를 위한
 기능은 HTMLElement, SVGElement, XULElement와 같은 객체를 통해서 추가해서 사용하고 있다.
 
-주요기능
 
 식별자
-문서내에서 특정한 엘리먼트를 식별하기 위한 용도로 사용되는 API
-
-lement.classList
-Element.className
-Element.id
-Element.tagName
+    - 문서내에서 특정한 엘리먼트를 식별하기 위한 용도로 사용되는 API
+        1. Element.classList
+        2. Element.className
+        3. Element.id
+        4. Element.tagName
 
 조회
-엘리먼트의 하위 엘리먼트를 조회하는 API
-
-Element.getElementsByClassName
-Element.getElementsByTagName
-Element.querySelector
-Element.querySelectorAll
+    - 엘리먼트의 하위 엘리먼트를 조회하는 API
+        1. Element.getElementsByClassName
+        2. Element.getElementsByTagName
+        3. Element.querySelector
+        4. Element.querySelectorAll
 
 속성
-엘리먼트의 속성을 알아내고 변경하는 API
+    - 엘리먼트의 속성을 알아내고 변경하는 API
+        1. Element.getAttribute(name)
+        2. Element.setAttribute(name, value)
+        3. Element.hasAttribute(name);
+        4. Element.removeAttribute(name);
 
-Element.getAttribute(name)
-Element.setAttribute(name, value)
-Element.hasAttribute(name);
-Element.removeAttribute(name);
+문서의 기하학적 특징
+    - 측정의 기준이 되는 엘리먼트가 무엇이였는지 알고싶을때 사용되는 API
+        1. offsetParent
+    
+    - 테두리를 제외한 엘리먼트의 크기를 확인할때 사용하는 API
+        1. ClientWidth
+        2. Cliendeight
+
+    - viewport는 문서의 내용중 사용자에게 보여주는 영역을 의미한다.
+      이에따라 문서의 좌표가 있고 뷰포트의 좌표가 있다.
+        1. Element.getBoundingClientRect()
+            Element.getBoundingClientRect() 메서드는 엘리먼트의 크기와 뷰포트에 상대적인
+            위치 정보를 제공하는 DOMRect 객체를 반환한다.
+
+        2. Window.pageYOffset
+            Window 인터페이스의 pageYOffset 읽기 전용 속성은 scrolly의 다른 이름으로
+            문서가 수직적으로 얼마나 스크롤됐는지 픽셀 단위로 반환한다.
+            (수평 스크롤을 나타내는 pageXOffset_(en-US)속성 역시 scrolly의 다른 이름니다.)
+    
+
+
+    - 
