@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input type="button" id="target" value="button" />
+<script>
+    var t = document.getElementById('target');
+    t.onclick = function(event){
+       var event = event || window.event;
+       var target = event.target || event. srcElement;
+       console.log(event.srcElement );
+    }
+</script>
+</body>
+</html>
+<!--프로퍼티 리스너 방식
+     ie8 이하 버전 문제 해소
+  
+    || 첫번째 값이 없다면 기호 뒤쪽에 있는 값을 사용하겠다. -->
