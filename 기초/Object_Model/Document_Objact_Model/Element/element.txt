@@ -45,6 +45,16 @@ DOM은 HTML만을 제어하기 위한 모델이 아니다. HTML이나 XML, SVG, 
             Window 인터페이스의 pageYOffset 읽기 전용 속성은 scrolly의 다른 이름으로
             문서가 수직적으로 얼마나 스크롤됐는지 픽셀 단위로 반환한다.
             (수평 스크롤을 나타내는 pageXOffset_(en-US)속성 역시 scrolly의 다른 이름니다.)
+        
+    - 문서의 스크롤 값을 변경하는 API
+        1. scrollLeft
+        2. scrollTop
+
+    - 스크린의 크기는 모니터의 크기와 브라우저 뷰포트의 크기가 있을떄 알아내는 API
+        1. window.inner*
+            뷰포트의 크기
+        2. screen.*
+            스크린의 크기
     
 
 
